@@ -30,3 +30,29 @@ bitcoin = bitcoin.to_f
 
 # 3. inspect the bitcoin_data hash
 # puts bitcoin_data
+
+# 4. find the rate of bitcoin in usd
+usd_rate = bitcoin_data["bpi"]["USD"]["rate_float"]
+puts usd_rate
+
+# 5. calculate the value of the user's bitcoin in usd
+usd_value = bitcoin * usd_rate
+puts usd_value
+
+# 6. Display the output
+
+puts "1 Bitcoin is valued at $#{usd_rate} USD."
+puts "Your Bitcoin is worth $#{usd_value}."
+
+
+# Sample output:
+# 1 Bitcoin is valued at $41405.1046 USD.
+# Your Bitcoin is worth $62107.6569.
+
+
+# bpi = bitcoin_data["bpi"]
+# USD = bpi["USD"]
+# puts bpi["rate_float"]
+# puts "1 Bitcoin is valued at #{bpi["rate_float"]}"
+# puts "Your Bitcoin is worth #{bpi["rate_float"] * bitcoin}"
+
